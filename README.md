@@ -1,3 +1,31 @@
+# 5-voting-app-docker
+
+This project demonstrates the Docker Sample Voting Application using Docker Compose.
+
+## Architecture
+
+![Architecture diagram](architecture.excalidraw.png)
+
+- A front-end web app in Python which lets you vote between two options.
+- Redis collects new votes.
+- A .NET worker consumes votes and stores them in PostgreSQL.
+- PostgreSQL database stores votes using persistent volume mapping.
+- A Node.js web app displays the voting results in real time.
+
+## Services and Ports
+
+| Service | Port |
+|---|---|
+| Vote | 8080 |
+| Result | 8081 |
+| Worker | Internal |
+| Redis | Internal |
+| PostgreSQL | Internal |
+
+## Run the Application
+
+```bash
+docker compose up -d --build<<<<<<< HEAD
 # Example Voting App
 
 A simple distributed application running across multiple Docker containers.
@@ -63,3 +91,6 @@ The voting application only accepts one vote per client browser. It does not reg
 This isn't an example of a properly architected perfectly designed distributed app... it's just a simple
 example of the various types of pieces and languages you might see (queues, persistent data, etc), and how to
 deal with them in Docker at a basic level.
+=======
+# 5-voting-app-docker
+>>>>>>> origin/main
