@@ -1,6 +1,7 @@
 postgres-data/
 .env
-*.log*.pyc
+*.log
+*.pyc
 project.lock.json
 bin/
 obj/
